@@ -565,8 +565,8 @@ padding: .6em;
 
 @media screen and (max-width: 800px) {
     header a:first-child img {
-        width: 3em;
-        height: 3mm!important;
+        width: 80px;
+        height: 80px;
         object-fit: contain;
     }
 }
