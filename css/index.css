@@ -399,7 +399,11 @@ section h2:first-child{
         flex-direction: column;
     }
 
-
+    header> section a:last-of-type img {
+        width: 3em;
+        height: 3mm!important;
+        object-fit: contain;
+    }
 
     .music-column {
         flex-direction: column;
