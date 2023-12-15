@@ -595,7 +595,16 @@ padding: .6em;
 
 
 @media screen and (max-width: 500px) {
-
+    #helpBtn{
+        display: none;
+    }
+    header> section a:last-of-type em{
+        font-size: 1.6em!important;
+        
+    }
+    header> section a:last-of-type {
+       margin-bottom: 1em!important;
+    }
     /*== Navigation menu styles */
     header> section a:last-of-type {
         position: fixed;
