@@ -54,7 +54,7 @@
             <picture>
                 <source media="(max-width:799px)" srcset="img/logo-80x80.webp" width="80" height="80">
                 <source media="(min-width:800px)" srcset="img/logo-200x47.webp">
-                <img src="img/logo-200x47.webp" alt="" >
+                <img src="img/logo-200x47.webp" alt="">
             </picture>
         </a>
 
@@ -152,7 +152,10 @@
                             <div>
                                 <!-- Canción -->
                                 <audio id="audio" src="./data/music-player/sngs/blk182.mp3"
-                                    aria-label="Reproductor de audio"></audio>
+                                    aria-label="Reproductor de audio">
+                                    <source src="./data/music-player/sngs/blk182.mp3" type="audio/mp3"> 
+                                </audio>
+ 
 
                                 <!-- Información de la canción -->
                                 <div class="audio-info">
@@ -330,7 +333,7 @@
                     <td>Cerrar ventana de búsqueda</td>
                     <td><em class="fa fa-search"></em></td>
                 </tr>
- 
+
                 <tr>
                     <td>SHIFT + P</td>
                     <td>Reproducir/Pausar</td>
