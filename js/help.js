@@ -1,38 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const helpBtn = document.getElementById('helpBtn');
     const keyGuideDialog = document.getElementById('keyGuideDialog');
     const closeDialogBtn = document.getElementById('closeDialogBtn');
 
-    helpBtn.addEventListener('click', function() {
+    helpBtn.addEventListener('click', function () {
         keyGuideDialog.showModal(); // O .show(), dependiendo de cómo quieras que se comporte
     });
 
-    closeDialogBtn.addEventListener('click', function() {
+    closeDialogBtn.addEventListener('click', function () {
         keyGuideDialog.close();
     });
-//Keydown H para para abrir
-    document.addEventListener('keydown', function(event) {
-        if (event.keyCode === 72) {
+
+    // Keydown H o Shift + H para abrir
+    document.addEventListener('keydown', function (event) {
+        if ((event.shiftKey && (event.key === 'H' || event.key === 'h'))) {
             keyGuideDialog.showModal();
         }
     });
-    //Keydown escape para cerrar
-    keyGuideDialog.addEventListener('keydown', function(event) {
-        if (event.keyCode === 27) {
+
+    // Keydown escape para cerrar
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
             keyGuideDialog.close();
         }
     });
 
     // Click fuera del dialog para cerrar
-    keyGuideDialog.addEventListener('click', function(event) {
+    keyGuideDialog.addEventListener('click', function (event) {
         if (event.target === keyGuideDialog) {
             keyGuideDialog.close();
         }
     });
 
-    // C para abrir formulario de contacto
-    document.addEventListener('keydown', function(event) {
-        if (event.keyCode === 67) {
+    // C o Shift + C para abrir formulario de contacto
+    document.addEventListener('keydown', function (event) {
+        if (event.shiftKey && (event.key === 'C' || event.key === 'c')) {
             // Verifica si la URL actual contiene '/hobbies'
             if (window.location.href.includes('/hobbies')) {
                 // Redirige a "../sobre-mi.html#contacto" si se encuentra '/hobbies'
