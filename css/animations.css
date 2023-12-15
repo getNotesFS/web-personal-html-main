@@ -1,0 +1,143 @@
+/* Logo size */
+main>section:first-child svg {
+    width: 100%;
+    height: auto;
+    max-width: 16em;
+}
+
+/* Animation */
+main>section:first-child svg g:nth-child(2) path:nth-child(3) {
+
+    animation-name: dot-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dot-animation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: translateY(-0.5em);
+    }
+
+
+
+    100% {
+        fill: #cf2e2e;
+        transform: rotate(-4deg);
+    }
+}
+
+main>section:first-child svg g:nth-child(2) path:nth-child(1) {
+
+    animation-name: m-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes m-animation {
+    /* Se modifica el transform de rotate por temas de animación
+        por lo que se mantiene el warning de css. */
+    0% {
+        transform: rotate(0deg); 
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+main>section:first-child svg g:nth-child(2) path:nth-child(2) {
+
+    animation-name: s-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes s-animation {
+    /* Se modifica el transform de rotate por temas de animación
+        por lo que se mantiene el warning de css. */
+    0% {
+        transform: rotate(0deg);
+    }
+
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+main>section:first-child svg g:nth-child(1) rect:nth-child(3) {
+    animation-name: bg1-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bg1-animation {
+    /* Se modifica el transform de rotate y animación por temas de animación
+        por lo que se mantiene el warning de css. */
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    100% {
+        opacity: 0.9;
+        transform: translateY(-0.3em);
+    }
+}
+
+main>section:first-child svg g:nth-child(1) rect:nth-child(2) {
+
+    animation-name: bg2-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bg2-animation {
+      /* Se modifica el transform de rotate y animación por temas de animación
+        por lo que se mantiene el warning de css. */
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    100% {
+        opacity: 0.7;
+        transform: translateY(-0.4em);
+    }
+}
+
+main>section:first-child svg g:nth-child(1) rect:nth-child(1) {
+
+    animation-name: bg3-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bg3-animation {
+      /* Se modifica el transform de rotate y animación por temas de animación
+        por lo que se mantiene el warning de css. */
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+
+    100% {
+        opacity: 0.4;
+        transform: translateY(-0.25em);
+    }
+}

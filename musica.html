@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/Logo-sm-1x1.svg" type="image/svg+xml">
+
+    <title>Mis Playlists - Sebastian Mármol</title>
+    <link rel="stylesheet" href="./css/shared-styles.css">
+    <link rel="stylesheet" href="./css/pages-style.css">
+    <link rel="stylesheet" href="./css/music.css">
+
+
+    
+
+
+    <script src="https://kit.fontawesome.com/66d7b97049.js" crossorigin="anonymous"></script>
+
+
+<!-- Hotjar Tracking Code for Web Personal v2 -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3788194,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "k68r3qm72k");
+</script>
+
+</head>
+
+<body>
+
+    <!-- Contenedor para el componente del encabezado -->
+    <header id="header-container">
+        <a href="/" title="Inicio" aria-label="Ir a la página de inicio">
+            <picture>
+              <source media="(max-width:799px)" srcset="img/logo-80x80.webp">
+              <source media="(min-width:800px)" srcset="img/logo-200x47.webp">
+              <img src="img/logo-200x47.webp" alt="Logo de la página que redirecciona a la página de inicio.">
+            </picture>
+          </a>
+          
+          
+          <nav>
+            <a href="/index.html">Inicio</a>             <a href="sobre-mi.html">Sobre mí</a>
+            <a href="/hobbies">Hobbies</a>
+          </nav>
+          
+          
+          <section aria-label="Buscador y botón de contactar">
+            <em class="fa-solid fa-search" id="btn-buscar" aria-label="Botón para abrir buscador"></em> 
+            <a href="sobre-mi.html#contacto" title="Enviar un correo">
+                <em class="fa-solid fa-paper-plane"></em> <span>Contactar</span>
+            </a>
+          </section> 
+    </header>
+    <div id="overlay"></div>
+    <div id="search_main_container">
+        <div id="buscador">
+            <!-- Campo de Búsqueda -->
+            <label for="campo-buscar">Buscar en el sitio:</label>
+            <input type="search" id="campo-buscar" placeholder="Buscar en el sitio..." >
+
+            <!-- Botón para Realizar la Búsqueda -->
+            <button id="boton-buscar" aria-label="Empezar búsqueda"><em class="fa-solid fa-magnifying-glass"></em>Buscar</button>
+
+
+        </div>
+        <!-- Div para Mostrar los Resultados de la Búsqueda -->
+        <div id="resultados-busqueda"></div>
+    </div>
+
+
+    <main>
+        <article class="music-article"> 
+
+            <header class="page-header">
+                <nav aria-label="Breadcrumb" class="breadcrumb-general">
+                    <a href="/index.html">Inicio</a>                     <small><em class="fa-solid fa-chevron-right"></em></small>
+                    <span>musica</span>
+                </nav>
+                <hgroup>
+                    <h1>Música</h1>
+                    <p>Te comparto mis últimos Playlists en Spotify.</p>
+                </hgroup>
+                <div class="page-cover">
+                    <a href="https://open.spotify.com/playlist/1IkEWkIBECMGVX9Qseka9x" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visitar Playlist - Rebel Yell en Spotify">
+                        <img src="./img/music-player/Rock.png" alt="Playlist - Rebel Yell">
+                    </a>
+                </div>
+            </header>
+
+
+            <section class="playlists-grid">
+                <h2>Playlists</h2>
+                <div class="playlists">
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/1IkEWkIBECMGVX9Qseka9x" target="_blank">
+                            <img src="img/music-player/Rock.png" alt="Icono de Playlist - Rebel Yell">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                Rebel Yell
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </h3>
+                        </a>
+                    </article>
+
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/4U92L85BOQ7b8RcN4gVvKx" target="_blank">
+                            <img src="img/music-player/Rock-2.png" alt="Icono de Playlist - Rock">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                Rock
+                                <em class="fa-solid fa-arrow-right"></em>
+                            </h3>
+                        </a>
+                    </article>
+
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/4nbtiQ3c8HegHGJznv7VXl" target="_blank">
+                            <img src="img/music-player/Indie-505.png" alt="Icono de Playlist - Indie 505">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                Indie 505
+                                <em class="fa-solid fa-arrow-right"></em>
+                            </h3>
+                        </a>
+                    </article>
+
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DWWQRwui0ExPn" target="_blank">
+                            <img src="img/music-player/Lofi-beats.png" alt="Icono de Playlist - Lofi beats">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                Lofi beats
+                                <em class="fa-solid fa-arrow-right"></em>
+                            </h3>
+                        </a>
+                    </article>
+
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1DX3oM43CtKnRV" target="_blank">
+                            <img src="img/music-player/00s-Rock-Athems.png" alt="Icono de Playlist - 00s Rock Athems">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                00s Rock Athems
+                                <em class="fa-solid fa-arrow-right"></em>
+                            </h3>
+                        </a>
+                    </article>
+
+                    <article class="CardWithArrow">
+                        <a href="https://open.spotify.com/playlist/37i9dQZF1E37smVryC6Cet?si=9db5ffda56ab4466"
+                            target="_blank">
+                            <img src="img/music-player/Daily-Mix-2.png" alt="Icono de Playlist - Daily Mix 2">
+                            <h3>
+                                <span>Escuchar Playlist -</span>
+                                Daily Mix 2
+                                <em class="fa-solid fa-arrow-right"></em>
+                            </h3>
+                        </a>
+                    </article>
+
+                </div>
+            </section>
+        </article>
+     <button id="helpBtn" aria-label="Ayuda y Guía de Accesibilidad">
+            <em class="fa fa-question-circle"></em>
+        </button>
+
+        <dialog id="keyGuideDialog">
+
+            <table id="player_key_mode">
+                <tr>
+                    <td>H</td>
+                    <td>Abrir ayuda</td>
+                    <td><em class="fa fa-question-circle"></em></td>
+                </tr>
+                <tr>
+                    <td>C</td>
+                    <td>Para abrir formulario de contacto</td>
+                    <td><em class="fa fa-envelope"></em></td>
+                </tr>
+                <tr>
+                    <td>ESC</td>
+                    <td>Cerrar ventana de ayuda </td>
+                    <td><em class="fa fa-question-circle"></em></td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>Abrir buscador </td>
+                    <td><em class="fa fa-search"></em></td>
+                </tr>
+                <tr>
+                    <td>ESC</td>
+                    <td>Cerrar ventana de búsqueda</td>
+                    <td><em class="fa fa-search"></em></td>
+                </tr>
+            </table>
+
+            <table id="player_key_mode">
+                <tr>
+                    <td>P</td>
+                    <td>Reproducir/Pausar</td>
+                    <td><em class="fa fa-play"></em>/<em class="fa fa-pause"></em></td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>+ 5 segundos </td>
+                    <td><em class="fa fa-forward"></em></td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>- 5 segundos </td>
+                    <td><em class="fa fa-backward"></em></td>
+                </tr>
+                <tr>
+                    <td>→</td>
+                    <td>Siguiente Pista </td>
+                    <td><em class="fa fa-step-forward"></em></td>
+                </tr>
+                <tr>
+                    <td>←</td>
+                    <td>Pista Anterior </td>
+                    <td><em class="fa fa-step-backward"></em></td>
+                </tr>
+            </table>
+            <button id="closeDialogBtn">Cerrar</button>
+        </dialog></main>
+
+
+    <footer id="footer-container">
+        <small>© 2023. Todos los derechos reservados.</small>
+        <nav>
+            <a href="/sitemap.xml">Sitemap</a>
+        </nav>
+
+        <nav>
+            <a href="https://www.linkedin.com/in/sfmarmol" target="_blank">
+                <em class="fa-brands fa-linkedin" alt="Visita mi perfil de Linkedin"></em>Linkedin
+            </a>
+            <a href="https://github.com/getnotesfs" target="_blank">
+                <em class="fa-brands fa-github" alt="Visita mi repositorioen de GitHub"></em>GitHub
+            </a>
+            <a href="mailto:contacto@sfmarmol.com" target="_blank">
+                <em class="fa-solid fa-envelope" alt="Envíame un correpo por este medio"></em>E-mail
+            </a>
+        </nav>
+    </footer>
+    
+
+
+    
+
+<script src="js/buscador.js"></script>
+<script src="js/help.js"></script>
+</body>
+
+</html>

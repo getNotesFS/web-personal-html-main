@@ -1,0 +1,311 @@
+ /* audio info */
+ .audio-info {
+     display: flex;
+     gap: 20px;
+ }
+
+ .text {
+     color: #f50;
+ }
+
+ .main-track-info {
+     text-align: left;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     gap: .5em;
+ }
+
+ .main-track-info .title {
+     color: #fff;
+     font-weight: 600;
+     font-size: 1em;
+     line-height: normal;
+     margin: 0em;
+ }
+
+ .main-track-info .author {
+     color: #c8c1c1;
+     margin: 0em;
+ }
+
+ /* audio image */
+ .icon-wrapper {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100%;
+ }
+
+ .audio-image {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100px;
+     width: 100px;
+     background: #1e1e1e;
+ }
+
+ .audio-icon {
+     font-size: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 80px;
+     width: 80px;
+     border-radius: 50%;
+     background: #989898;
+ }
+
+ .audio-image img {
+     object-fit: cover;
+     width: 100%;
+     object-fit: cover;
+     aspect-ratio: 1/1;
+ }
+
+ /* controls */
+ .controls-wrapper {
+     display: flex;
+    flex-direction: column;
+     justify-content: stretch;
+     align-items: center;
+     margin-top: 10px;
+ }
+ 
+ .volume-controls{
+    display: none;
+ }
+ /* .skipBackward, .skipForward{
+     display: none;
+ } */
+
+
+ .controls button,
+ .volume button {
+     border: none;
+     background-color: transparent;
+     margin-right: 8px;
+     cursor: pointer;
+ }
+
+ button em {
+    color: #fff;
+     font-size: 20px;
+ }
+
+ .volume {
+     display: flex;
+     align-items: center;
+ }
+
+ .volume button {
+     margin: 0;
+ }
+
+ .progress {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+     width: 100%;
+
+ }
+
+ .progress-bar-range {
+     width: 80%;
+     height: 4px;
+     background-color: #989898;
+     border-radius: 2px;
+     position: relative;
+ }
+
+
+
+ .play-pause-btn{
+    background-color: white!important;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); 
+}
+.play-pause-btn  em{
+    font-size: 30px;
+    color: #404040;
+    transition: all 0.3s ease;
+    align-self: center;
+    
+}
+
+ /* time */
+ .time {
+     color: white;
+     font-size: 13px;
+     line-height: 46px;
+ }
+
+ .time.current {
+     color:white;
+    }
+
+
+ .playback-controls{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+ }
+
+.playback-controls button{
+    
+    border: none;
+    background-color: transparent;
+    margin-right: 8px;
+    cursor: pointer;
+
+}
+.volume-btn{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    
+}
+.volume-controls button{
+    margin: 0;
+    border: none;
+}
+
+ /*==============Estilo player v2*/
+
+ .audio-player {
+    width: 100%;
+     display: flex;
+     flex-direction: column;
+     background-color: #2d2d2d;
+     color: white;
+     border-radius: 20px;
+     padding: 1em; 
+     box-sizing: border-box;
+ }
+
+ .track-info {
+     /* Estilos para la sección de información de la pista actual */
+     margin-bottom: 20px;
+ }
+
+ .progress-and-playlist {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+
+
+
+ /* ============================ PlayList Style */
+
+ .playlist {
+     background-color: #2d2d2d;
+     color: white;
+     border-radius: 10px;
+    
+     max-height: 180px;
+     overflow-y: auto;
+ }
+
+
+
+ .playlist ul {
+     list-style: none;
+     margin: 0;
+     padding: 0;
+ }
+
+ .playlist li {
+     padding: 10px 15px;
+     cursor: pointer;
+     border-radius: 5px;
+     margin-bottom: 5px;
+     transition: background-color 0.3s ease;
+ }
+
+ .playlist li:hover,
+ .playlist li.selected {
+     background-color: #404040;
+
+ }
+
+ .playlist li:hover .track-title,
+ .playlist li.selected .track-title {
+
+     font-weight: 600;
+ }
+
+ .playlist li:not(:last-child) {
+     border-bottom: 1px solid #555;
+ }
+
+ /* Estilos para el nombre de la canción y el artista */
+ .track-details {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     font-size: .8em;
+     color: #ffffff;
+     font-weight: 500;
+     text-align: left;
+     align-items: flex-start; 
+
+ }
+
+ .track-title {
+     font-size: 1em;
+     font-weight: 500;
+     color: #fff;
+     margin: 0;
+     line-height: normal;
+ }
+
+ .track-artist {
+     font-size: 0.9em;
+     color: #aaa;
+     margin: 0em;
+ }
+
+ .playlist ul{
+    padding-right: .3em;
+    padding-top: .5em;
+ }
+ /* Puedes agregar más estilos según tus necesidades */
+
+ .playlist::-webkit-scrollbar {
+     height: 6px;
+     width: 6px;
+ }
+
+ .playlist::-webkit-scrollbar-corner {
+     background-color: transparent;
+ }
+
+ .playlist::-webkit-scrollbar-thumb {
+     background-color: rgba(178, 178, 178, 0.64);
+     border-radius: 4px;
+ }
+
+ .playlist::-webkit-scrollbar-track-piece {
+     -webkit-margin-before: 8px;
+     margin-block-start: 8px;
+     -webkit-margin-after: 8px;
+     margin-block-end: 8px;
+ }
+
+ .sr-only {
+     position: relative!important;
+ }

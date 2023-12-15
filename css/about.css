@@ -1,0 +1,290 @@
+.about-me {
+    width: 100%;
+    max-width: var(--max--width);
+    display: flex;
+    flex-direction: column;
+    padding: 1.8em 1.4em 2.5em;
+}
+
+.about-me header figure {
+    max-width: 18.75em;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-me header figure img {
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(.9);
+}
+
+.about-me header:hover figure img {
+    filter: grayscale(0);
+}
+
+
+.about-me .contact-section {
+    margin-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: start;
+    align-items: flex-start;
+    row-gap: 1em;
+    margin-bottom: 3em;
+    text-align: left;
+
+}
+
+
+.about-me .contact-section .map-content img {
+
+    width: 100%;
+}
+
+.about-me .contact-section .map-content:hover {
+
+    filter: grayscale(0);
+}
+
+.about-me .contact-section nav a svg {
+    height: 1.5em;
+    width: 1.5em;
+    transition: all ease-in-out .2s;
+}
+
+.about-me .contact-section nav a:hover svg {
+    margin-top: -0.7em;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+
+.about-me .contact-section h2,
+.about-me .contact-section h3,
+.about-me .contact-section p {
+    width: 100%;
+    margin-bottom: 0em;
+    margin-top: 0.3em;
+}
+
+
+
+.about-me .contact-section nav {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.4em;
+    justify-content: start;
+}
+
+.form-map {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1.5em;
+}
+
+.form-map figure {
+    width: 100%;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+.about-me .contact-section .formulario {
+    margin-top: 0.7em;
+    width: calc(45% - 1.4em);
+    text-align: left;
+}
+
+.about-me .contact-section .map-content {
+    border-radius: 0.3em;
+
+    flex: 1;
+    max-height: 25em;
+    height: auto;
+    filter: grayscale(1);
+}
+
+
+input[type="text"],
+input[type="email"],
+select,
+textarea,
+button {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 0.7em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
+}
+
+.about-me .contact-section form button {
+    /* Warning de css con respecto a la variable de color, pero está declarada en el archivo shared.css */
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.about-me .contact-section form button:hover {
+    /* Warning de css con respecto a la variable de color, pero está declarada en el archivo shared.css */
+    background-color: var(--red);
+}
+
+.notification {
+    display: flex;
+    margin-bottom: 0.5em;
+    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: .3em;
+    width: 100%;
+    background-color: aquamarine;
+    color: black;
+    font-weight: bold;
+    padding: .5em;
+    display: none;
+
+}
+
+.show {
+    display: flex;
+}
+
+/*===========Breakpoints para Tablets y Desktop */
+
+
+@media screen and (max-width: 768px) {
+
+    .about-me header figure {
+        order: 1;
+    }
+
+    .about-me header hgroup {
+        order: 2;
+    }
+
+
+    .about-me .contact-section {
+        /* Cambiar tamaño  de columnas cuando sea en dispositivos móviles */
+        grid-template-columns: auto;
+    }
+
+
+
+    .about-me .contact-section .formulario {
+        /* Cambiar a ancho completo el formulario en dispositivos móviles */
+        width: 100%;
+    }
+
+    .about-me .contact-section .map-content {
+        /* Cambiar a ancho completo el mapa en dispositivos móviles */
+        width: 100%;
+    }
+}
+
+
+
+
+/*==== Logo with description section ====*/
+.page-header {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    /* align-items: flex-start; */
+    justify-content: start;
+    align-items: center;
+    row-gap: 1.4em;
+
+  
+    margin: 0 auto;
+
+    max-width: var(--max--width);
+
+} 
+.page-g{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+ 
+.page-header figure {
+    width: 40%;
+    height: auto;
+    padding: 0em;
+    margin: 0em;
+    overflow: hidden;
+    border-radius: 0.3em;
+    transition: all ease-in-out .3s;
+}
+
+.page-header figure:hover {
+    transform: scale(1.1);
+    z-index: 3;
+    /* width: 41%; */
+}
+
+.page-header figure img {
+    max-height: 20em;
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+    transition: all 0.4s ease-in-out;
+    transform-origin: center center;
+    border-radius: 0.3em;
+}
+
+.page-header figure:hover img {
+    transform: scale(1.5);
+    transform-origin: top;
+}
+
+.page-header hgroup {
+    width: calc(100% - 40% - 2.5em);
+    padding: 0.7em;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .page-g{
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+        
+    }
+   .page-header .page-cover {
+        /* Cambiar el ancho del .page-cover a 100% cuando esté en dispositivos de 768px o inferior. */
+        width: 100%;
+    }
+
+   .page-header figure {
+        /* Cambiar tamño  de columnas cuando sea en dispositivos móviles */
+        width: 100%;
+
+    }
+
+   .page-header hgroup {
+        /* Cambiar tamaño  de columnas cuando sea en dispositivos móviles */
+        width: 100%;
+    }
+ 
+}

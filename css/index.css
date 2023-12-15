@@ -1,0 +1,451 @@
+/*==== Logo with description section */
+main>section:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.4em;
+    padding: 1.4em;
+    width: 100%;
+    /* Warning de css con respecto a la variable de color, pero está declarada en el archivo shared.css */
+    background: #fafafa;
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+main>section:first-child figure {
+    max-width: 18.75em;
+    flex-grow: 1;
+    width: 90%;
+    margin: 0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+main>section:first-child hgroup {
+    /* background-color: var(--white); */
+    max-width: 37.5em;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+main>section:first-child hgroup h1 {
+    font-family: 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 900;
+    line-height: 1.2em;
+    margin-bottom: 0.7em;
+}
+
+main>section:first-child h1,
+main>section:first-child p {
+    margin: 0em;
+}
+
+ 
+/*  Playlist*/
+
+.PlaylistSection {
+    /* Color de texto hereda de body, no ha falta definir nuevamente. */
+
+    background-color: #ffffffd4;
+    background-image:
+        url("../img/oh__demo1__1.png");
+    background-blend-mode: hard-light;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    place-items: center;
+
+    width: 100%;
+    padding: 1.4em;
+    gap: 1.4em;
+    margin: 0 auto;
+    justify-content: flex-start;
+    
+    align-content: center;
+    
+    max-width: var(--max--width);
+    padding-top: 0em!important; 
+}
+
+.PlaylistSection h2 {
+    text-align: center;
+    padding: 1em;
+    padding-top: 2em;
+    margin-top: 0em!important; 
+    text-shadow: 0px 0px 10px #fff;
+    font-size: var(--main-section-font-size);
+    font-weight: var(--main-section-font-weight);
+    line-height: var(--main-section-line-height);
+}
+
+
+
+
+.music-column {
+    max-width: calc(var(--max--width) - 20em);
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
+    width: 100%;
+
+}
+
+.music-column a:first-of-type {
+    max-width: 25em;
+}
+
+.music-player {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+/*====Section Hobbies Styles */
+/*====Section Styles */
+.HobbiesSection {
+    /* Warning de css con respecto a al ancho máximo, pero está declarada en el archivo shared.css */
+    max-width: var(--max--width);
+    width: 100%;
+    padding: 1.4em 1.4em 6.25em 1.4em;
+    align-content: start;
+    gap: 1.4em;
+}
+
+
+
+.HobbiesSection h2 {
+    text-align: left;
+
+    font-size: var(--main-section-font-size);
+    font-weight: var(--main-section-font-weight);
+    line-height: var(--main-section-line-height);
+    margin-bottom: 0.7em;
+}
+
+
+.hobby-grid {
+    max-width: var(--max--width);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+}
+
+.external-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.hobby-grid article:not(.external-arrow) {
+    border: 1px solid #cfcece;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.hobby-grid article:hover:not(.external-arrow){
+    transition: ease-in-out 0.2s;
+    transform: scale(1.01);
+    cursor: pointer;
+    /*degradado de este color para el hover del card: #dc28284f */
+
+    box-shadow: 0 1px 3px 0 rgba(246, 119, 119, 0.04), 0 1px 6px -1px rgba(254, 123, 123, 0.03), 0 2px 4px 0 rgba(241, 131, 131, 0.03);
+
+}
+
+.hobby-grid article a {
+    width: 100%;
+}
+
+.hobby-grid article img {
+    width: 100%;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.3em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    object-fit: cover;
+}
+
+.hobby-grid article h3 {
+    margin: 10px 0;
+
+    padding: .3em 1em;
+    margin: 0em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+
+ 
+ /* Movies */
+ .MovieSection {
+    /* Color de texto  hereda de body, no ha falta definir nuevamente. */
+
+    background-color: #fffffffe;
+    background-image:
+        url("../img/oh_bg-min.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    padding: 1.4em 10%;
+    gap: 1.4em;
+    margin: 0 auto;
+
+    margin-bottom: 5em;
+    
+}
+
+.MovieCard {
+
+    max-width: var(--max--width);
+
+    border: solid 1px #f0f0f0;
+    border-radius: .3em;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+
+    background-color: #fffffffe;
+}
+.MovieSection a {
+    
+    max-width: var(--max--width);
+}
+
+.MovieSection h2 {
+    
+    font-size: var(--main-section-font-size);
+    font-weight: var(--main-section-font-weight);
+    line-height: var(--main-section-line-height);
+    text-align: center;
+    width: 100%;
+    padding: 0.7em 1.4em;
+    /* Warning de css con respecto a al ancho máximo, pero está declarada en el archivo shared.css */
+    max-width: var(--max--width);
+}
+
+
+/* Estilos para el article */
+
+
+.MovieCard {
+    display: flex;
+    flex-direction: row;
+    gap: 1.4em;
+    padding: 2.5em;
+
+}
+
+.MovieCard img {
+    flex-basis: 20em;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    border-radius: .3em;
+
+}
+
+.MovieCard .movie-details {
+    flex-grow: 1;
+background-color: var(--white);
+    padding-top: 0.7em;
+    text-align: left;
+}
+
+
+
+.MovieSection article:hover img {
+    transition: all ease-in-out .2s;
+    transform: rotate(-5deg);
+}
+
+
+.MovieSection article .movie-details h3 {
+    margin: 0em;
+
+}
+
+
+
+/* Article Button style */
+.MovieSection article .movie-details p a {
+    margin-top: 1.4em;
+
+}
+
+.MovieSection article a {
+    
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 12.5em;
+    /* Warning de css con respecto a la variable de color, pero está declarada en earchivo shared.css */
+    border: 0.0625em solid var(--black);
+    border-radius: 0.3em;
+}
+
+.MovieSection article a {
+    /* Color de texto y fondo hereda de body, no ha falta definir nuevamente. */
+
+
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.3em;
+    text-shadow: none;
+    bottom: 1.5em;
+    padding: 0.7em 1.4em;
+}
+
+.MovieSection article a:hover {
+    /* Warning de css con respecto a la variable de color, pero está declarada en earchivo shared.css */
+    color: var(--hover-red);
+}
+
+
+
+
+
+
+
+section h2:first-child{
+    width: 100%;
+    /* background-color: #fff; */
+}
+
+/*===========Breakpoints para Tablets y Desktop */
+
+
+/*===========Breakpoints para Tablets y Desktop */
+
+
+
+ 
+
+@media screen and (max-width: 800px) {
+
+    .MovieSection {
+        padding: 1.4em 1.4em 6.25em 1.4em;
+    }
+
+    .MovieSection article {
+        flex-direction: column;
+    }
+
+    .MovieSection article img {
+        max-width: 20em;
+        justify-self: center;
+        align-self: center;
+    }
+}
+ 
+
+
+@media (min-width: 769px) {
+    .hobby-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    main>section:first-child {
+        /* Cambiar la dirección de flex a columna, es decir que sea en filas y no columnas. */
+        flex-direction: column;
+    }
+
+
+
+    .music-column {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .music-column a:first-of-type {
+        max-width: 100%;
+    }
+
+    .music-player {
+        width: 100%;
+    }
+
+    .PlaylistSection {
+        padding: 0em;
+        padding-top: 4em;
+        padding-bottom: 4em;
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+   
+}
+
+
+/* Estilos para móvil */
+
+@media screen and (max-width: 320px) {
+
+    /*==== Logo with description section */
+    main>section:first-child hgroup h1 {
+        /* Tamaño de texto reducido en dispositivos móviles */
+        font-size: 10vw;
+    }
+
+}
+
+/* Estilos para móvil */
+@media (max-width: 480px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+}
+

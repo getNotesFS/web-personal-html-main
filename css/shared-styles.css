@@ -1,0 +1,633 @@
+/*===== Colors */
+:root {
+    --black: #000000;
+    --gray: #abb8c3;
+    --white: #fff;
+    --red: #cf2e2e;
+    --hover-red: #dc2828;
+    --light-gray: #fafafa;
+    /* Tamaño máximo del ancho del sitio web en pantallas grandes. */
+    --max--width: 85.5em; 
+  --main-section-font-size: clamp(1.8em, 5vw, 2.2em);
+  --main-section-font-weight: 700;
+  --main-section-line-height: 1.3em;
+}
+
+
+/*===== Global styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+
+    color: var(--black);
+    background-color: var(--white);
+}
+
+a {
+
+    color: var(--black);
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    color: var(--hover-red);
+
+}
+
+a:hover svg {
+
+    fill: var(--hover-red);
+}
+
+a h2,
+a h2,
+a h3,
+p a {
+    /* Warning respecto a display: en el caso del sitio web tiene un ícono dentro así que hago que sea un flex para alinearlos al medio verticalmente y darle espacio entre los elementos. */
+    display: flex;
+    align-items: center;
+    column-gap: 0.3em;
+}
+
+/* Svg style by default */
+svg:not(nav a svg, nav small svg) {
+    /* Warning de css menciona como redefinitition, pero básicamente solo se está filtrando los svg a los cuales se les da estilo inicial. */
+    width: 1em;
+    width: 1em;
+}
+
+/* Breadcrumb */
+nav small svg {
+    width: .8em;
+    height: .8em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+main>section {
+    min-height: 36em;
+}
+
+
+
+
+/*===== Navigation menu styles*/
+header {
+    display: grid;
+    padding: 1.4em;
+    /* Warning de css con respecto a al ancho máximo, pero está declarada en el archivo shared.css */
+    max-width: var(--max--width);
+    grid-template-columns: auto 1fr auto;
+    gap: 0.7em;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header nav {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    place-content: center;
+}
+
+
+header nav a {
+    font-size: 1.2em;
+}
+
+header a picture {
+    display: flex;
+    width: 100%;
+}
+
+header> section a:last-of-type {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    column-gap: 0.3em;
+    padding: 0.4em;
+    
+    font-weight: 600;
+    text-align: center;
+    border-radius: 0.3em;
+
+    background-color: var(--black);
+    color: var(--white);
+    border: 0.0625em solid var(--gray);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1;
+}
+
+header> section a:last-of-type:hover {
+    /* Color de texto se hereda de body, no hace falta definirlo nuevamente. */
+    background-color: var(--hover-red);
+    transform: translateY(-0.125em);
+}
+
+header> section a:last-of-type:hover span {
+    /* Color de background se hereda de body, no hace falta definirlo nuevamente. */
+    color: var(--white);
+}
+
+header> section a:last-of-type i {
+    fill: var(--white);
+    height: 1em;
+    width: 1em;
+}
+
+
+
+
+header> section:first-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+header > section:first-of-type i.fa-search{
+   cursor: pointer;
+   font-size: 1.4em;
+}
+
+a i.fa-envelope, a i.fa-github, a i.fa-linkedin {
+    font-size: 1.4em;
+
+}
+a{
+    cursor: pointer;
+}
+
+/*===== Footer styles */
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    place-content: center;
+
+    background-color: var(--black);
+    color: var(--white);
+
+    align-items: center;
+    padding: 1.4em;
+    gap: 0.7em;
+}
+
+footer>nav {
+    /* Warning de css con respecto a al ancho máximo, pero está declarada en el archivo shared.css */
+    max-width: calc(var(--max--width) - 22.5em);
+    flex-grow: 1;
+    display: flex;
+    gap: 0.7em;
+    justify-content: end;
+    align-items: center;
+}
+
+footer>small {
+    max-width: 22.5em;
+    flex-grow: 1;
+}
+
+footer>nav a {
+    display: inline-flex;
+    color: white;
+    /* display: flex; */
+    align-items: flex-start;
+    gap: 0.3em;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
+}
+
+footer>nav a em {
+    color: var(--white);
+    height: 2em;
+    padding: 0.3em;
+    width: auto;
+    transition: all ease-in-out .2s;
+}
+
+footer>nav a em:hover {
+
+    color: var(--hover-red);
+    margin-top: -0.7em;
+    border-radius: 0.3em;
+}
+
+footer .sr-only {
+color: red!important;
+position: relative;
+}
+
+
+
+
+
+
+.link-button {
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    text-decoration: none;
+    color: var(--black);
+    font-weight: 600;
+    font-size: 1.17em;
+
+    gap: 1em;
+    background-color: var(--white);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.link-button:hover {
+    border-radius: 0.3em;
+    /* border: 0.0625em solid var(--black); */
+}
+
+.link-button img {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: .3em;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.with-border {
+    border: 0.0625em solid var(--black);
+    border-radius: .3em;
+}
+
+.with-border-radius img {
+    border-radius: .3em;
+}
+
+.max-width-btn-large {
+    max-width: 300px;
+}
+
+.max-width-btn-small {
+    max-width: 150px;
+}
+
+.max-width-btn-medium {
+    max-width: 240px;
+}
+
+
+
+
+/* Estilos generales del breadcrumb */
+.breadcrumb-general {
+
+    width: 100%;
+    max-width: max-content;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* Cambiará a 'center' en pantallas más pequeñas */
+    /* padding: 1.8em 1.4em 2.5em; */
+    gap: 0.7em;
+    margin: 1em;
+    border-radius: 0.3em;
+    color: var(--white);
+    background-color: var(--black);
+    /* Asumiendo que quieres un fondo negro para todos los items */
+
+    padding: .3em;
+}
+
+/* Estilos de los enlaces dentro del breadcrumb */
+.breadcrumb-general a {
+    font-weight: 600;
+    /* Estableciendo el font-weight a 600, sobrescribe el 500 anterior */
+    font-size: .9em;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    padding: 0.21em 0.5em;
+    color: var(--white);
+    /* Este color sobrescribe el color gris del último enlace si es necesario */
+    background-color: var(--black);
+    /* Fondo para los enlaces, si todos los enlaces tienen el mismo fondo */
+}
+
+/* Estilos para el último enlace del breadcrumb */
+.breadcrumb-general span {
+    color: var(--gray);
+    padding-right: .5em;
+    pointer-events: none;
+}
+
+/* Estilos para los SVG dentro de los enlaces */
+.breadcrumb-general svg {
+    fill: white;
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+    .breadcrumb-general {
+        justify-content: center;
+    }
+}
+
+
+
+.CardWithArrow {
+    border: 1px solid #f3f3f3;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  }
+  
+  .CardWithArrow:hover {
+    transition: ease-in-out 0.2s;
+    transform: scale(1.01);
+    cursor: pointer;
+    /*degradado de este color para el hover del card: #dc28284f */ 
+  
+    box-shadow: 0 1px 3px 0 rgba(246, 119, 119, 0.04), 0 1px 6px -1px rgba(254, 123, 123, 0.03), 0 2px 4px 0 rgba(241, 131, 131, 0.03);
+  
+  }
+  
+  .CardWithArrow a {
+    width: 100%;
+  }
+  
+  .CardWithArrow img {
+    width: 100%;
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 0.3em;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    object-fit: cover;
+  }
+  
+  .CardWithArrow h3 {
+    margin: 10px 0;
+  
+    padding: .3em 1em;
+    margin: 0em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  
+  }
+
+#buscador{
+    display: flex;
+    width: 100%;
+    gap: .3em;
+}
+#search_main_container input[type="search"] {
+    width: 100%;
+    padding: 1em;  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 600;
+    color: var(--black);
+    background-color: var(--white);
+    transition: all ease-in-out .2s;
+}
+#search_main_container button {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    max-width: 90px;
+    transition: all ease-in-out .2s;
+
+
+}
+/* #search_main_container i{
+    color: #000000;
+} */
+
+  #search_main_container {
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-52%, -12%);
+    background-color: white;
+    z-index: 100;
+    width: 90%;
+    max-width: var(--max--width); 
+    padding: 20px; 
+    border-radius: .3em;
+}
+
+
+#search_main_container.show{
+    display: flex;
+}
+#resultados-busqueda{
+    padding: 1em;
+    margin-top: 1em;
+    max-height: 60vh;
+    overflow: auto;
+    width: 100%;
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.search-resultados{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    background-color: #fbfbfb;
+    margin-bottom: .5em;
+    border-bottom: 1px solid black;
+    padding: 0.8em;
+    border-radius: .2em;
+    box-shadow: 3px 6px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+}
+.search-resultados p{
+    margin-top: .3em;
+    margin-bottom: .3em;
+    font-size: .8em;
+}
+
+
+#overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000b3;
+    z-index: 99;
+
+}
+
+#overlay.show{
+    display: block;
+}
+
+#player_key_mode li{
+    list-style: none;
+}
+#player_key_mode em{
+    font-size: 1.2em;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    padding: .5em;
+}
+tr{
+    border-bottom: 1px solid #ccc;
+}
+ 
+#helpBtn em{
+    color: #000;
+    font-size: 2.5em;
+}
+#helpBtn {
+    cursor: pointer;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1000;
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    /* Otros estilos para el botón */
+}
+
+
+
+.audio-player{
+    z-index: 2999;
+}
+#player_key_mode  {
+    background-color: white;
+    padding: 1em;
+border-radius: .3em;
+margin-top: .5em;
+z-index: 0;
+}
+#keyGuideDialog button{
+width: 100%;
+padding: .6em;
+}
+/*===========Breakpoints para Tablets y Desktop */
+
+@media screen and (max-width: 800px) {
+    header a:first-child img {
+        width: 3em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    /*== Navigation menu styles */
+    header nav {
+        /* Cambiar grid por flex para lograr apilar el menú de navegación
+        más específica sin medir tamaños. */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+ 
+    header> section a:last-of-type i {
+        display: block;
+    }
+
+    header> section a:last-of-type span {
+        display: none;
+    }
+
+    header> section a:last-of-type:hover span {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    /*== Navigation menu styles */
+    header> section a:last-of-type {
+        position: fixed;
+        right: 1.4em;
+        bottom: 1.4em;
+        margin-bottom: 2.5em;
+    }
+
+    footer {
+        padding-top: 0.7em;
+        text-align: center;
+    }
+
+    footer nav {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    /*== Navigation menu styles */
+    header {
+        /* Cambiar el ancho de la caja a tamaño completo */
+        grid-template-columns: 1fr;
+    }
+
+    header a:first-child picture {
+        justify-content: center;
+    }
+
+    header nav {
+        /* Centrar navegación en este tamaño de pantalla */
+        justify-content: center;
+    }
+}

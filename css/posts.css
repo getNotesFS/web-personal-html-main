@@ -1,0 +1,267 @@
+.hobbies-single-article {
+    width: 100%;
+    max-width: var(--max--width);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.4em;
+}
+
+.main-content {
+    width: 100%;
+}
+
+.inner-navigation {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.hobbies-grid {
+    max-width: var(--max--width);
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.hobbies-grid h2 {
+
+    text-align: left;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.7em;
+}
+
+.gallery {
+    /* Warning de css con respecto a al ancho máximo, pero está declarada en el archivo shared.css */
+
+    width: 100%;
+    padding: 1.4em 1.4em 6.25em 1.4em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(30% - 1.4em), 1fr));
+    align-content: start;
+    gap: 1.4em;
+}
+
+.gallery {
+    max-width: var(--max--width);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    /* Espacio entre las tarjetas */
+}
+
+.gallery figure {
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    margin: 0em;
+    border-radius: 0.125em;
+}
+
+.gallery figure img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    transition: transform ease-in-out .3s;
+}
+
+.gallery figure figcaption {
+    font-weight: 600; 
+    z-index: 2;
+    position: absolute;
+    bottom: 0em;
+    padding: 0.7em;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    height: auto;
+    /* background: linear-gradient(180deg, rgba(23, 23, 23, 0), rgb(0, 0, 0)); */
+    /* background-color: rgba(255, 255, 255, 0.7);  */
+ 
+    background-color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+    /* opacity: .6; */
+}
+
+.gallery figure:hover figcaption {
+    opacity: 1;
+    text-shadow: 0.0625em 0.0625em 0.125em black;
+    background: linear-gradient(180deg, rgb(23 23 23 / 30%), rgb(0, 0, 0));
+}
+
+.gallery figure:hover img {
+    transform: scale(1.1);
+}
+
+.g-item-description {
+    width: 100%; 
+    font-weight: 400;
+   display: none;
+}
+
+.gallery figure:hover .g-item-description {
+    display: block;
+}
+
+
+
+.inner-navigation {
+    max-width: var(--max--width);
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 1.4em;
+    padding-left: 1.4em;
+    padding-top: 1.4em;
+    padding-bottom: 2.5em;
+    gap: 0.7em;
+    margin: 0 auto;
+}
+
+.inner-navigation a {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+/*===========Breakpoints para Tablets y Desktop */
+
+
+@media (min-width: 769px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+
+}
+
+/* Estilos para móvil */
+@media (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+
+/*==== Logo with description section ====*/
+.page-header-single {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: start;
+    align-items: flex-start;
+    row-gap: 1.4em;
+
+    flex-direction: column;
+
+
+    max-width: var(--max--width);
+
+}
+
+.page-g-single {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.page-header-single figure {
+    /* width: 40%; */
+    height: auto;
+    padding: 0em;
+    margin: 0em;
+    overflow: hidden;
+    border-radius: 0.3em;
+    transition: all ease-in-out .3s;
+}
+ 
+
+.page-header-single figure:hover {
+    transform: scale(1.1);
+    z-index: 3;
+    /* width: 41%; */
+}
+
+.page-header-single figure img {
+    max-height: 20em;
+    width: 100%;
+    object-fit: contain;
+    object-position: top;
+    transition: all 0.4s ease-in-out;
+    transform-origin: center center;
+    border-radius: 0.3em;
+}
+
+.page-header-single figure:hover img {
+    transform: scale(1.5);
+    transform-origin: top;
+}
+
+.page-header-single hgroup {
+    width: calc(100% - 40% - 2.5em);
+    padding: 0.7em;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .page-g-single {
+        flex-direction: column;
+        gap: 1em;
+        justify-content: center;
+
+    }
+
+    .page-header-single .page-cover {
+        /* Cambiar el ancho del .page-cover a 100% cuando esté en dispositivos de 768px o inferior. */
+        width: 100%;
+    }
+
+    .page-header-single figure {
+        /* Cambiar tamño  de columnas cuando sea en dispositivos móviles */
+        width: 100%;
+
+    }
+
+    .page-header-single hgroup {
+        /* Cambiar tamaño  de columnas cuando sea en dispositivos móviles */
+        width: 100%;
+    }
+
+}
