@@ -569,6 +569,9 @@ padding: .6em;
         height: 80px;
         object-fit: contain;
     }
+    #btn-buscar{
+       font-size: 1.6em;
+    }
 }
 
 @media screen and (max-width: 768px) {
