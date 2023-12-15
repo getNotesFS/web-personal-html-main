@@ -248,43 +248,43 @@ document.addEventListener('DOMContentLoaded', function () {
     new Playlist(playlistElement, audioPlayer);
 
     document.addEventListener('keydown', function (event) {
-        event.preventDefault();
- 
-        switch (event.key) {
-            case 'P': // Barra espaciadora para reproducir/pausar
-                audioPlayer.togglePlayPause();
-                break;
-            case 'p': // Barra espaciadora para reproducir/pausar
-                audioPlayer.togglePlayPause();
-                break;
+        if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+            // Permitir que las teclas se escriban en campos de entrada de texto o áreas de texto.
+            return;
+        }
 
-            // case 'ArrowUp': // Flecha arriba para subir el volumen
-            //     audioPlayer.setVolume(audioPlayer.audioElement.volume + 0.05);
-            //     break;
-            // case 'ArrowDown': // Flecha abajo para bajar el volumen
-            //     audioPlayer.setVolume(audioPlayer.audioElement.volume - 0.05);
-            //     break;
- 
-            case 'f': // Tecla F para avanzar 5 segundos
-                audioPlayer.skipForward();
-                break;
-            case 'F': // Tecla F para avanzar 5 segundos
-                audioPlayer.skipForward();
-                break;
-            case 'b': // Tecla B para retroceder 5 segundos
-                audioPlayer.skipBackward();
-                break;
-            case 'B': // Tecla B para retroceder 5 segundos
-                audioPlayer.skipBackward();
-                break;
-                
-            case 'ArrowRight': // Flecha derecha para la siguiente pista
-                audioPlayer.nextTrack();
-                break;
-            case 'ArrowLeft': // Flecha izquierda para la pista anterior
-                audioPlayer.previousTrack();
-                break;
-            // Aquí puedes agregar más casos según sea necesario
+        if (event.shiftKey) {
+            switch (event.key) {
+                case 'P': // Shift + P
+                case 'p': // Shift + p
+                    event.preventDefault();
+                    audioPlayer.togglePlayPause();
+                    break;
+                case 'F': // Shift + F
+                case 'f': // Shift + f
+                    event.preventDefault();
+                    audioPlayer.skipForward();
+                    break;
+                case 'B': // Shift + B
+                case 'b': // Shift + b
+                    event.preventDefault();
+                    audioPlayer.skipBackward();
+                    break;
+                // Agregar más casos si es necesario
+            }
+        } else {
+            switch (event.key) {
+                case 'ArrowRight': // Flecha derecha para la siguiente pista
+                    event.preventDefault();
+                    audioPlayer.nextTrack();
+                    break;
+                case 'ArrowLeft': // Flecha izquierda para la pista anterior
+                    event.preventDefault();
+                    audioPlayer.previousTrack();
+                    break;
+                // Agregar más casos si es necesario
+            }
         }
     });
 });
+
